@@ -1,0 +1,24 @@
+* {
+	text-align: justify;
+}
+
+.post {
+	margin: 2rem;
+	padding: 2rem;
+	border: 0.019rem solid grey;
+	border-radius: 10px;
+}
+.post h1 {
+	font-size: xx-large;
+	padding-top: 0;
+	padding-bottom: 0.001rem;
+}
+.post .by {
+	margin-top: 0rem;
+	padding: 0rem;
+	color: black;
+	font-size: medium;
+}
+.post .description {
+	font-size: larger;
+}

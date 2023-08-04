@@ -1,5 +1,5 @@
-import { Post as IPost } from "./main";
-import { auth, db } from "../../config/firebase";
+import { Post as IPost } from "../main";
+import { auth, db } from "../../../config/firebase";
 import {
 	collection,
 	addDoc,
@@ -11,6 +11,7 @@ import {
 } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useEffect, useState } from "react";
+import "./post.css";
 interface Props {
 	post: IPost;
 }
@@ -86,14 +87,10 @@ export const Post = (props: Props) => {
 
 	return (
 		<div>
-			<div className='title'>
+			<div className='post'>
 				<h1>{post.title}</h1>
-			</div>
-			<div className='body'>
-				<p>{post.description}</p>
-			</div>
-			<div className='footer'>
-				<p>@{post.username}</p>
+				<p className='by'>@{post.username}</p>
+				<p className='description'>{post.description}</p>
 				<span>
 					{hasUserLiked ? (
 						<button onClick={removeLike}> &#128078;</button>
